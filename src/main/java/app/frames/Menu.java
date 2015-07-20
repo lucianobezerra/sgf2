@@ -58,6 +58,11 @@ public class Menu extends javax.swing.JFrame {
     jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     jButton1.setMaximumSize(new java.awt.Dimension(100, 55));
     jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+    jButton1.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButton1ActionPerformed(evt);
+      }
+    });
     jToolBar1.add(jButton1);
 
     jButton2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -213,6 +218,11 @@ public class Menu extends javax.swing.JFrame {
     defineCompetencia.setVisible(true);
     jLabel2.setText("Competência: " + DefineCompetencia.getInstance().getMes()+"/"+DefineCompetencia.getInstance().getAno());
   }//GEN-LAST:event_jButton4ActionPerformed
+
+  private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+  FrameCompetencia frameCompetencia = new FrameCompetencia(this, true);
+  frameCompetencia.setVisible(true);
+  }//GEN-LAST:event_jButton1ActionPerformed
 
   public static void main(String args[]) {
     try {
